@@ -5,6 +5,7 @@ Class Rotas{
 	public static $pag;
 	private static $pasta_controller = 'controller';
 	private static $pasta_view = 'view';
+	private static $pasta_ADM = 'adm';
 
 
 
@@ -36,6 +37,7 @@ Class Rotas{
 		return  self::get_SiteHOME(). '/clientes_recovery';
 	}
 
+	
 	static function pag_CLientePedidos(){
 		return  self::get_SiteHOME(). '/clientes_pedidos';
 	}
@@ -88,6 +90,17 @@ Class Rotas{
 		return  self::get_SiteHOME(). '/pedido_finalizar';
 	}
 
+
+	 static function pag_PedidoRetorno(){
+        
+        return self::get_SiteHOME() .'/pedido_retorno' ;
+    }
+   
+   static function pag_PedidoRetornoERRO(){
+        
+        return self::get_SiteHOME() .'/pedido_retorno_erro' ;
+    }
+
 	static function get_ImagePasta(){
 		return 'media/images/';
 	}
@@ -96,6 +109,90 @@ Class Rotas{
 		return self::get_SiteHOME() .'/' .self::get_ImagePasta();
 
 	}
+
+
+
+
+
+	//rotas para área administrativa
+
+	static function get_SiteADM(){
+		return self::get_SiteHOME() .'/' .self::$pasta_ADM;
+
+	}
+
+
+	static function pag_ProdutosADM(){
+		return self::get_SiteADM() .'/adm_produtos';
+
+	}
+
+	static function pag_ProdutosNovoADM(){
+		return self::get_SiteADM() .'/adm_produtos_novo';
+
+	}
+
+	static function pag_ProdutosEditarADM(){
+		return self::get_SiteADM() .'/adm_produtos_editar';
+
+	}
+
+	static function pag_ProdutosDeletarADM(){
+		return self::get_SiteADM() .'/adm_produtos_deletar';
+
+	}
+
+	static function pag_ProdutosImgADM(){
+		return self::get_SiteADM() .'/adm_produtos_img';
+
+	}
+
+
+
+	static function pag_ClientesADM(){
+		return self::get_SiteADM() .'/adm_clientes';
+
+	}
+
+
+	static function pag_ClientesEditarADM(){
+		return self::get_SiteADM() .'/adm_clientes_editar';
+
+	}
+
+	static function pag_PedidosADM(){
+		return self::get_SiteADM() .'/adm_pedidos';
+
+	}
+
+	static function pag_ItensADM(){
+		return self::get_SiteADM() .'/adm_itens';
+
+	}
+
+	static function pag_CategoriasADM(){
+		return self::get_SiteADM() .'/adm_categorias';
+
+	}
+
+
+	static function pag_LogoffADM(){
+		return self::get_SiteADM() .'/adm_logoff';
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	static function ImageLink($img, $largura, $altura){
 		$imagem = self::get_ImageURL() ."thumb.php?src={$img}&w={$largura}&h={$altura}&zc=1";
