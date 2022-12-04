@@ -109,8 +109,26 @@
 
 
             <!--FORMA DE PGTO AQUI -->
+            <button class="btn btn-success btn-lg btn-block" onclick="PagSeguroLightbox({
+    code: '{$PS_COD}'
+    }, {
+    success : function(transactionCode) {
+      alert('Transação efetuada - ' + transactionCode);
+        window.location ='{$PAG_RETORNO}/{$REF}';
+    },
+    abort : function() {
+       alert('Erro no processo de pagamento');
+         window.location ='{$PAG_ERRO}/{$REF}';
+    }
+});   
 
-            <img src="{$TEMA}/images/logo-pagseguro.png"  alt=""> 
+"> Pague com o Pagseguro </button>
+
+
+            <div align="center">
+               <img src="{$TEMA}/images/logo-pagseguro.png"  alt="">
+            </div> 
+            <script type="text/javascript" src="{$PS_SCRIPT}"></script>
 
 
                 

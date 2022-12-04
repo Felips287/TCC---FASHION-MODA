@@ -1,8 +1,10 @@
-
+ 
 <hr>
 
 {if $PRO_TOTAL < 1}
 <H4 class="alert alert-danger">Nenhum produto encontrado!!</H4>
+<meta http-equiv="refresh" content=1;url="{$PRODUTOS}">
+
 {/if}
  
     

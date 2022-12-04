@@ -85,7 +85,7 @@
         {foreach from=$PRO item=P}
         
             <tr style="border: 1px solid #b2dba1">
-            
+             
             <td>  {$P.pro_nome}  </td>
             <td>  {$P.pro_valor} </td>
             <td>  {$P.pro_qtd}   </td>

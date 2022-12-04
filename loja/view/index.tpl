@@ -81,6 +81,7 @@
                                 <li><a href="{$PAG_MINHACONTA}"><i class="glyphicon glyphicon-user"></i> Minha Conta </a> </li>
                                 <li><a href="{$PAG_CARRINHO}"><i class="glyphicon glyphicon-shopping-cart"></i> Carrinho </a> </li>
                                 <li><a href="{$PAG_CONTATO}" ><i class="glyphicon glyphicon-envelope"></i> Contato </a> </li>
+                                 <li><a href="{$GET_SITE_HOME}/adm/login.php" ><i class="glyphicon glyphicon-lock"></i> Painel ADM </a> </li>
                                 
                                 
                                
@@ -88,9 +89,11 @@
                             </ul>
                             
 
-                            <form class="navbar-form navbar-right" role="search">
+                            <form class="navbar-form navbar-right" role="search"
+                            method="POST" action="">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Digite para buscar" required>
+                                    <input type="text"
+                                    name="txt_buscar" class="form-control" placeholder="Digite para buscar" required>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Buscar</button>
                             </form>
@@ -138,8 +141,7 @@
                 <!-- coluna direita CONYEUDO CENTRAL -->
                 <div class="col-md-10">
                     
-                    
-           
+               
                     <!-- fim do menu breadcrumb-->             
                     
                   {php}
@@ -162,10 +164,11 @@
             <!-- começa div rodape -->
             <div class="row" id="rodape">
                 <center>
-                    <h4>{$TITULO_SITE}</h4>
+                       <h4>{$TITULO_SITE}</h4>
                     <br><P>Este site foi desenvolvido para a realização e apresentação do TCC
                     <P>Todas as imagens dos produtos foram retiradas da internet e tem seus
-                    direitos autorais reservados</P>    
+                    direitos autorais reservados</P> 
+                    <h5>Alunos participantes : Felipe Silva - 3TII "A" ; Adriely Silva - 3TII "A" ; Lays Sammara - 3TII "A" ; Daniel Araújo - 3TII "A" ; Gabriel Marcos - 3TII "A" </h5>  
                     <P>Data Atual: {$DATA}</P>
                 </center>
             

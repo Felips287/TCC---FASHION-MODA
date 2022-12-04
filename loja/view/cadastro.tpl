@@ -26,7 +26,7 @@
       
         <div class="col-md-3">
             <label>Data Nasc:</label>
-            <input type="date" name="cli_data_nasc" class="form-control" required>
+            <input type="date" name="cli_data_nasc" class="form-control" placeholder="dd/mm/aaaa" required>
             
             
         </div>

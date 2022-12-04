@@ -6,6 +6,7 @@
     <h4 class="text-center">Meus Pedidos</h4>
     
     <center>
+    {if $PEDIDOS_QUANTIDADE > 0}
     <table class="table table-bordered" style="width: 90%">
         
         <tr class="text-danger bg-danger">
@@ -18,7 +19,6 @@
         </tr>
         
         {foreach from=$PEDIDOS item=P}
-        
         <tr>
             
             <td style="width: 10%">{$P.ped_data}</td>
@@ -42,11 +42,30 @@
         </form>    
             
         </tr>
-        {/foreach}
+
+      
+
+      {/foreach}
+
+
+    
         
     </table>
+
+    {else}
+        Você não tem nenhum pedido ainda!
+        {/if}
       </center>
-    
+
+
+
     
 </section>
+
+
+<section id="pagincao" class="row">
+    <center>
+    {$PAGINAS}
+    </center>
+    </section>
       
